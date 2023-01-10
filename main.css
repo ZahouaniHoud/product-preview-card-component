@@ -62,17 +62,8 @@ select {
   8. Avoid text overflows
 */
 p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
 h1 {
-  line-height: 1;
+  overflow-wrap: break-word;
 }
 
 /* Custom properties */
@@ -101,10 +92,13 @@ body {
   font-size: 0.875rem;
   color: var(--clr-neutral-400);
   background-color: var(--clr-secondary);
+}
 
+main {
+  min-height: 100vh;
   display: grid;
   place-content: center;
-  margin: 1rem;
+  margin-inline: 1rem;
 }
 
 /* Utilities */
@@ -182,6 +176,7 @@ body {
   font-size: 2rem;
   color: var(--clr-neutral-1000);
   font-weight: var(--fw-bold);
+  line-height: 1;
 }
 
 .product__desc {
@@ -198,9 +193,6 @@ body {
   background-color: var(--clr-neutral-100);
   width: 100%;
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   padding: 0.8rem;
   font-size: 0.9rem;
 }
@@ -209,7 +201,6 @@ body {
   text-decoration: none;
   color: var(--clr-primary);
   font-weight: var(--fw-bold);
-  transition: text-decoration 5s;
 }
 
 .attribution a:is(:hover, :focus) {
